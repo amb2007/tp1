@@ -11,6 +11,8 @@
     <header>
         <h1>Modas Actuales</h1>
         <h2>Esta página está hecha para mostrar los diferentes tipos de ropa que se usan hoy en día, incluyendo:</h2>
+        <button class="theme-toggle">Modo Oscuro</button>
+
     </header>
 
     <main>
@@ -87,5 +89,12 @@
     <footer>
         <p>&copy; 2025 Moda Actual. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        const toggleButton = document.querySelector('.theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script>
 </body>
 </html>
